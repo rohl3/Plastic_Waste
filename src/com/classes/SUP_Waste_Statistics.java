@@ -19,7 +19,7 @@ public class SUP_Waste_Statistics extends JFrame{
     private JScrollPane scrollPane;
     private JButton readMeBtn;
     private JLabel titleLbl;
-
+    private JLabel imageLbl;
 
     public  SUP_Waste_Statistics() throws Exception {
         setContentPane(Panel1);
@@ -31,7 +31,6 @@ public class SUP_Waste_Statistics extends JFrame{
         jlist1.setModel(listModel);
         helpBtn.setPreferredSize(new Dimension(69,42));
         readMeBtn.setPreferredSize(new Dimension(69,42));
-
 
         helpButton();
         csvFileReader();
@@ -56,6 +55,8 @@ public class SUP_Waste_Statistics extends JFrame{
             placticProduct = new PlacticProduct(rank, producer,noOfAssets,flexible_SUP_waste,rigid_SUP_waste,total_SUP_waste);
             listModel.addElement(placticProduct.getRank()+"- "+placticProduct.getPolymerProducer());
             arrayList.add(placticProduct);
+            ImageIcon imageIcon = new ImageIcon("plasticWasteLogo.png");
+            imageLbl.setIcon(imageIcon);
         }
     }
 
