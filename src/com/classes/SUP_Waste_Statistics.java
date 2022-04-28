@@ -118,7 +118,7 @@ public class SUP_Waste_Statistics extends JFrame{
         readMeBtn.addActionListener(e -> {
             String showMsg = """
                     Lo scopo di questo programma è quello di informare 
-                    l'utente riguardo gli sprechi e i di plastica da parte 
+                    l'utente riguardo gli sprechi di plastica da parte 
                     di alcune delle piu grandi aziende produttrici di polimeri.
                     
                     Le aziende sono ordinate in base alle loro produzioni 
