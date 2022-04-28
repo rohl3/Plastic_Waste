@@ -2,6 +2,8 @@ package com.classes;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ public class SUP_Waste_Statistics extends JFrame{
     private JButton readMeBtn;
     private JLabel titleLbl;
     private JLabel imageLbl;
+    private JButton graphBtn;
 
     public  SUP_Waste_Statistics() throws Exception {
         setContentPane(Panel1);
@@ -37,7 +40,7 @@ public class SUP_Waste_Statistics extends JFrame{
         jlistElementSelector();
         moreInfoButton();
         readMeButton();
-
+        graphButton();
     }
     //legge i dati del file.csv e li carica su una String da cui poi ricaverà i dati da caricare sull'array
     public void csvFileReader() throws Exception {
@@ -132,6 +135,14 @@ public class SUP_Waste_Statistics extends JFrame{
                     già conosciute.     
                     """;
             JOptionPane.showMessageDialog(rootPane, showMsg);
+        });
+    }
+
+
+    public void graphButton(){
+        graphBtn.addActionListener(e -> {
+            ImageIcon imageIcon = new ImageIcon("graph.png");
+            JOptionPane.showMessageDialog(rootPane,imageIcon);
         });
     }
 }
